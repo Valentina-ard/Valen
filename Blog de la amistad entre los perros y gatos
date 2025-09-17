@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amigos Peludos — Inicio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Amigos Peludos</h1>
+      <p class="site-subtitle">Un blog sobre la amistad entre gatos y perros</p>
+      <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="about.html">Sobre mí</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Bienvenid@</h2>
+      <p>Este es mi primer blog en HTML, dedicado a explorar la amistad entre los animales más queridos: gatos y perros. Aquí encontrarás historias, consejos y reflexiones sobre cómo conviven y se cuidan mutuamente.</p>
+      <p><a class="btn" href="about.html">Ir a About</a></p>
+    </section>
+
+    <section id="posts" class="posts">
+      <h2>Publicaciones</h2>
+
+      <!-- Publicación 1 -->
+      <article class="post">
+        <h3 class="post-title">¿Pueden los gatos y los perros ser amigos?</h3>
+        <p class="meta">Autor: Valen — Fecha: 2025-09-16</p>
+        <img src="post1.jpg" alt="Un perro y un gato juntos descansando" class="post-image">
+        <div class="post-body">
+          <p>Contrario a los mitos, gatos y perros pueden ser grandes compañeros. Todo depende de la socialización y el respeto mutuo.</p>
+          <p>En esta publicación exploramos cómo empezar una convivencia sana entre ellos.</p>
+        </div>
+      </article>
+
+      <!-- Publicación 2 -->
+      <article class="post">
+        <h3 class="post-title">Historias reales de amistad</h3>
+        <p class="meta">Autor: Valen — Fecha: 2025-08-30</p>
+        <img src="post2.jpg" alt="Gato y perro jugando en un jardín" class="post-image">
+        <div class="post-body">
+          <p>Muchos dueños comparten anécdotas en las que sus gatos y perros se convierten en inseparables. Desde dormir juntos hasta protegerse mutuamente.</p>
+          <p>Estas historias nos muestran que la amistad no tiene especie.</p>
+        </div>
+      </article>
+
+      <!-- Publicación 3 -->
+      <article class="post">
+        <h3 class="post-title">Consejos para presentarlos</h3>
+        <p class="meta">Autor: Valen — Fecha: 2025-07-10</p>
+        <img src="post3.jpg" alt="Primer encuentro entre un perro y un gato" class="post-image">
+        <div class="post-body">
+          <p>El primer contacto debe ser gradual y supervisado. Usa espacios seguros, premios y mucha paciencia para que ambos se sientan tranquilos.</p>
+        </div>
+      </article>
+
+      <!-- Publicación 4 -->
+      <article class="post">
+        <h3 class="post-title">Beneficios emocionales de su amistad</h3>
+        <p class="meta">Autor: Valen — Fecha: 2025-06-02</p>
+        <img src="post4.jpg" alt="Un perro y un gato acurrucados" class="post-image">
+        <div class="post-body">
+          <p>Gatos y perros que logran llevarse bien disfrutan de compañía constante, juegos diarios y menos soledad. Además, transmiten alegría a sus dueños.</p>
+        </div>
+      </article>
+
+      <!-- Publicación 5 -->
+      <article class="post">
+        <h3 class="post-title">El lenguaje corporal entre especies</h3>
+        <p class="meta">Autor: Valen — Fecha: 2025-05-18</p>
+        <img src="post5.jpg" alt="Un perro moviendo la cola frente a un gato curioso" class="post-image">
+        <div class="post-body">
+          <p>Aprender a interpretar señales como maullidos, movimientos de cola o posturas relajadas es clave para que ambos se entiendan mejor.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Amigos Peludos — <a href="about.html">Sobre mí</a></p>
+    </div>
+  </footer>
+</body>
+</html>
