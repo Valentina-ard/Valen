@@ -13,10 +13,10 @@
       color: #2c3e50; /* azul oscuro */
     }
     header {
-      background: #2c3e50; /* azul oscuro */
+      background: #2c3e50;
       padding: 30px;
       text-align: center;
-      color: #fdfaf5; /* cremita */
+      color: #fdfaf5;
       border-bottom: 5px solid #e6dacb;
     }
     header h1 {
@@ -43,7 +43,7 @@
       color: #1a252f;
     }
     main {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 30px;
       background: #ffffff;
@@ -59,30 +59,22 @@
       font-size: 1.1em;
       margin-bottom: 20px;
     }
-    .articulos {
+    .secciones {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .card {
       background: #fdfaf5;
       border: 2px solid #e6dacb;
       border-radius: 12px;
       padding: 20px;
-      text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
     }
     footer {
       text-align: center;
@@ -98,7 +90,7 @@
 <body>
   <header>
     <h1>Amistad entre Perros y Gatos</h1>
-    <p>Un blog dedicado a mostrar cómo dos mundos distintos pueden unirse en amistad</p>
+    <p>Un blog sobre cómo los opuestos pueden ser grandes amigos</p>
   </header>
 
   <nav>
@@ -107,29 +99,24 @@
   </nav>
 
   <main>
-    <h2>Bienvenidos 🐶🐱</h2>
+    <h2>Bienvenidos 🐾</h2>
     <p>
-      En este blog vas a encontrar historias, reflexiones y curiosidades sobre la convivencia entre perros y gatos.  
-      Dos animales que parecen opuestos, pero que con amor y paciencia pueden ser grandes compañeros.
+      En este blog voy a compartir ideas, reflexiones e historias sobre cómo los perros y gatos,
+      aunque diferentes, pueden construir relaciones de amistad llenas de cariño y respeto.
     </p>
 
-    <div class="articulos">
+    <div class="secciones">
       <div class="card">
-        <img src="https://i.imgur.com/azR3s9b.jpg" alt="Perro y gato durmiendo juntos">
-        <h3>La magia de la convivencia</h3>
-        <p>Descubre cómo un perro y un gato pueden adaptarse y compartir un mismo hogar en armonía.</p>
+        <h3>Convivencia</h3>
+        <p>Consejos sobre cómo lograr que perros y gatos vivan juntos en paz.</p>
       </div>
-
       <div class="card">
-        <img src="https://i.imgur.com/Nmp5zYb.jpg" alt="Perro y gato jugando">
-        <h3>Juegos compartidos</h3>
-        <p>Jugar juntos es posible: conoce formas de fomentar la diversión entre tus mascotas.</p>
+        <h3>Juegos</h3>
+        <p>Actividades que ayudan a fortalecer la relación entre ellos.</p>
       </div>
-
       <div class="card">
-        <img src="https://i.imgur.com/h3Of4uh.jpg" alt="Perro y gato mirándose">
-        <h3>Historias reales</h3>
-        <p>Relatos inspiradores de perros y gatos que son mejores amigos en la vida real.</p>
+        <h3>Historias</h3>
+        <p>Relatos reales de amistad entre perros y gatos alrededor del mundo.</p>
       </div>
     </div>
   </main>
