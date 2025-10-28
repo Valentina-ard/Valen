@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora tipo iPhone</title>
+  <style>
+    body {
+      background-color: #fdfaf5; /* cremita */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .calculadora {
+      background-color: #2c3e50; /* azul oscuro */
+      border-radius: 20px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .pantalla {
+      background-color: #1a252f;
+      color: #fdfaf5;
+      text-align: right;
+      font-size: 2.5em;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .botones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .btn-num {
+      background-color: #e6dacb; /* cremita */
+      color: #2c3e50;
+    }
+
+    .btn-op {
+      background-color: #3b4d61;
+      color: #fdfaf5;
+    }
+
+    .btn-clear {
+      background-color: #b23b3b;
+      color: white;
+    }
+
+    .btn-equal {
+      background-color: #1e90ff;
+      color: white;
+      grid-column: span 2;
+    }
+
+    .btn-back {
+      background-color: #ffae42;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculadora">
+    <div id="pantalla" class="pantalla">0</div>
+    <div class="botones">
+      <button class="btn-clear">C</button>
+      <button class="btn-back">←</button>
+      <button class="btn-op">/</button>
+      <button class="btn-op">*</button>
+
+      <button class="btn-num">7</button>
+      <button class="btn-num">8</button>
+      <button class="btn-num">9</button>
+      <button class="btn-op">-</button>
+
+      <button class="btn-num">4</button>
+      <button class="btn-num">5</button>
+      <button class="btn-num">6</button>
+      <button class="btn-op">+</button>
+
+      <button class="btn-num">1</button>
+      <button class="btn-num">2</button>
+      <button class="btn-num">3</button>
+      <button class="btn-equal">=</button>
+
+      <button class="btn-num" style="grid-column: span 4;">0</button>
+    </div>
+  </div>
+
+  <script>
+    const pantalla = document.getElementById('pantalla');
+    const botones = document.querySelectorAll('button');
+    let actual = '';
+    let operador = '';
+    let anterior = '';
+
+    botones.forEach(boton => {
+      boton.addEventListener('click', () => {
+        if (boton.classList.contains('btn-num')) {
+          if (pantalla.textContent === '0' || operador === '=') {
+            pantalla.textContent = boton.textContent;
+            operador = '';
+          } else {
+            pantalla.textContent += boton.textContent;
+          }
+        }
+
+        else if (boton.classList.contains('btn-op')) {
+          anterior = pantalla.textContent;
+          operador = boton.textContent;
+          pantalla.textContent += operador;
+        }
+
+        else if (boton.classList.contains('btn-equal')) {
+          try {
+            const resultado = eval(pantalla.textContent);
+            pantalla.textContent = resultado;
+            operador = '=';
+          } catch {
+            pantalla.textContent = 'Error';
+          }
+        }
+
+        else if (boton.classList.contains('btn-clear')) {
+          pantalla.textContent = '0';
+          actual = '';
+          operador = '';
+          anterior = '';
+        }
+
+        else if (boton.classList.contains('btn-back')) {
+          if (pantalla.textContent.length > 1) {
+            pantalla.textContent = pantalla.textContent.slice(0, -1);
+          } else {
+            pantalla.textContent = '0';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
